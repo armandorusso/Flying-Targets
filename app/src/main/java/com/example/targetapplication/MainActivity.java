@@ -85,32 +85,10 @@ public class MainActivity extends AppCompatActivity {
         String score = readFromFile(MainActivity.this);
         highScore.setText("HighScore: " + score);
 
-
-
-//        AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
-//        AlphaAnimation fadeOut = new AlphaAnimation(1.0f , 0.0f );
-//        start.setAnimation(fadeIn);
-//        start.setAnimation(fadeOut);
-//        fadeIn.setDuration(5000);
-//        fadeOut.setDuration(5000);
-//        fadeOut.setRepeatCount(Animation.INFINITE);
-//        fadeIn.setStartOffset(500+fadeIn.getStartOffset()+500);
-//        fadeIn.setRepeatCount(Animation.INFINITE);
-
-//        animation1.setDuration(2000);
-//        animation1.setStartOffset(2500);
-//
-//        animation2.setDuration(2000);
-//        animation2.setStartOffset(2500);
-
         start.startAnimation(animation1);
-
-
         animation1 = new AlphaAnimation(0.0f, 1.0f);
         animation1.setDuration(2000);
         animation1.setStartOffset(1000);
-
-        //animation1 AnimationListener
         animation1.setAnimationListener(new Animation.AnimationListener(){
 
             @Override
@@ -145,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 // start animation1 when animation2 ends (repeat)
                 start.startAnimation(animation1);
             }
-
+/*
             @Override
             public void onAnimationRepeat(Animation arg0) {
                 // TODO Auto-generated method stub
@@ -156,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation arg0) {
                 // TODO Auto-generated method stub
 
-            }
+            } */
 
         });
 
