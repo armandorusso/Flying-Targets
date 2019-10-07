@@ -72,28 +72,6 @@ public class TargetPlatForm extends AppCompatActivity {
             //final ImageView targets = (ImageView) findViewById(R.id.target);
             TextView counter = (TextView) findViewById(R.id.counter);
 
-//
-//        startText.setVisibility(View.INVISIBLE);
-//
-//
-//        final DisplayMetrics displayMetrics = new DisplayMetrics();
-//        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-//
-//
-//        float maxWidth = (displayMetrics.widthPixels / 2) - 256; //256 is the pic size (256x256)
-//        float minWidth = (0 - (displayMetrics.widthPixels / 2)) + 256;
-//        float maxHeight = (displayMetrics.heightPixels / 2) - 256;
-//        float minHeight = (0 - (displayMetrics.widthPixels / 2) + 256);
-//
-//
-//        float randomCoordinateWidth = Float.parseFloat((Math.random() * ((maxWidth - minWidth) + 1) + minWidth) + "");
-//        float randomCoordinateHeight = Float.parseFloat((Math.random() * ((maxHeight - minHeight) + 1) + minHeight) + "");
-//
-//
-//        targets.animate().translationX(randomCoordinateWidth).setDuration(100);
-//        targets.animate().translationY(randomCoordinateHeight).setDuration(100);
-
-
             view.setOnTouchListener(handleTouch);
 
             Log.i("Coordinates", x + " " + y);
@@ -256,16 +234,6 @@ public class TargetPlatForm extends AppCompatActivity {
 
         cloudMovement.run();
 
-       // Glide.with(this).load(R.drawable.giphymodified).into(cloud2);
-//        ImageView cloud1 = (ImageView) findViewById(R.id.cloud1);
-//        ImageView cloud4 = (ImageView) findViewById(R.id.cloud4);
-//
-//        AnimationDrawable a1 = (AnimationDrawable) cloud1.getDrawable();
-//        //AnimationDrawable a2 = (AnimationDrawable) cloud4.getDrawable();
-//
-//        a1.start();
-//        //a2.start();
-
     }
 
     //method to move the target. it takes into account the phone screen size so it doesnt go off screen
@@ -297,12 +265,6 @@ public class TargetPlatForm extends AppCompatActivity {
 
         else if (Math.floor(destinationX) == Math.floor(targets.getTranslationX()) && Math.floor(destinationY) == Math.floor(targets.getTranslationY())){
             Log.i("else if", destinationX + " " + targets.getX() + " " + targets.getTranslationX());
-//            randomCoordinateWidth = Float.parseFloat((Math.random() * ((maxWidth - minWidth) + 1) + minWidth) + "");
-//            randomCoordinateHeight = Float.parseFloat((Math.random() * ((maxHeight - minHeight) + 1) + minHeight) + "");
-//            destinationX = randomCoordinateWidth;
-//            destinationY = randomCoordinateHeight;
-//            targets.animate().translationX(randomCoordinateWidth).setDuration(targetMoveDuration);
-//            targets.animate().translationY(randomCoordinateHeight).setDuration(targetMoveDuration);
             destinationX = 0;
             destinationY = 0;
         }
@@ -346,18 +308,6 @@ public class TargetPlatForm extends AppCompatActivity {
                 targetNumber = 0;
                 targetImage1.setImageResource(targetArray[targetNumber]);
             }
-
-//            if(cloudNumber2 < 3) {
-//                cloudImage1.setImageResource(imageArray[cloudNumber2]);
-//                cloudImage4.setImageResource(imageArray[cloudNumber2]);
-//                cloudNumber2++;
-//            }
-//
-//            else {
-//                cloudNumber2 = 2;
-//                cloudImage1.setImageResource(imageArray[cloudNumber2]);
-//                cloudImage4.setImageResource(imageArray[cloudNumber2]);
-//            }
 
             handler.postDelayed(this, 500);
         }
