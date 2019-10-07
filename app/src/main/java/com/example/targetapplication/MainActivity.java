@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 start.startAnimation(animation2);
             }
 
-            @Override
+         /*   @Override
             public void onAnimationRepeat(Animation arg0) {
                 // TODO Auto-generated method stub
 
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation arg0) {
                 // TODO Auto-generated method stub
 
-            }
+            } */
 
         });
 
