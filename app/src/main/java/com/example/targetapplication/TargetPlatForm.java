@@ -53,12 +53,7 @@ public class TargetPlatForm extends AppCompatActivity {
     ImageView cloudImage3;
     ImageView cloudImage4;
     ImageView targetImage1;
-    int target1 = R.drawable.targetpaint;
-    int target2 = R.drawable.target2;
-    int target3 = R.drawable.target3;
-    int target4 = R.drawable.target4;
-    int target5 = R.drawable.target5;
-
+ 
     //on touch method
     public void moveTarget(View view) {
 
@@ -226,12 +221,7 @@ public class TargetPlatForm extends AppCompatActivity {
 
 
         targetImage1 = (ImageView) findViewById(R.id.target);
-        targetArray[0] = target1;
-        targetArray[1] = target2;
-        targetArray[2] = target3;
-        targetArray[3] = target4;
-        targetArray[4] = target5;
-
+       
         cloudMovement.run();
 
     }
@@ -284,7 +274,7 @@ public class TargetPlatForm extends AppCompatActivity {
     private Runnable cloudMovement = new Runnable() {
 
         public void run() {
-            if (cloudNumber < 3 || targetNumber < 4) {
+            if (cloudNumber < 3) {
                 cloudImage1.setImageResource(imageArray[cloudNumber]);
                 cloudImage2.setImageResource(imageArray[cloudNumber]);
                 cloudImage3.setImageResource(imageArray[cloudNumber]);
@@ -297,16 +287,6 @@ public class TargetPlatForm extends AppCompatActivity {
                 cloudImage2.setImageResource(imageArray[cloudNumber]);
                 cloudImage3.setImageResource(imageArray[cloudNumber]);
                 cloudImage4.setImageResource(imageArray[cloudNumber]);
-            }
-
-            if(targetNumber < 4) {
-                targetImage1.setImageResource(targetArray[targetNumber]);
-                targetNumber++;
-            }
-
-            else {
-                targetNumber = 0;
-                targetImage1.setImageResource(targetArray[targetNumber]);
             }
 
             handler.postDelayed(this, 500);
