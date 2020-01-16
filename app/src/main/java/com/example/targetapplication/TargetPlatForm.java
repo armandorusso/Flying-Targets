@@ -43,7 +43,6 @@ public class TargetPlatForm extends AppCompatActivity {
     int cloudNumber = 0;
     int targetNumber = 0;
     String cloudString = "cloud" + cloudNumber;
-    int [] imageArray = new int[3];
     int[] targetArray = new int[5];
     int cloud1 = R.drawable.cloud1;
     int Cloud2 = R.drawable.cloud2;
@@ -211,9 +210,6 @@ public class TargetPlatForm extends AppCompatActivity {
         setContentView(R.layout.activity_target_plat_form);
         targets = (ImageView) findViewById(R.id.target);
         ImageView cloud2 = (ImageView) findViewById(R.id.cloud2);
-        imageArray[0] = cloud1;
-        imageArray[1] = Cloud2;
-        imageArray[2] = cloud3;
         cloudImage1 = (ImageView) findViewById(R.id.cloud1);
         cloudImage2 = (ImageView) findViewById(R.id.cloud2);
         cloudImage3 = (ImageView) findViewById(R.id.cloud3);
@@ -271,26 +267,5 @@ public class TargetPlatForm extends AppCompatActivity {
         }
     };
 
-    private Runnable cloudMovement = new Runnable() {
-
-        public void run() {
-            if (cloudNumber < 3) {
-                cloudImage1.setImageResource(imageArray[cloudNumber]);
-                cloudImage2.setImageResource(imageArray[cloudNumber]);
-                cloudImage3.setImageResource(imageArray[cloudNumber]);
-                cloudImage4.setImageResource(imageArray[cloudNumber]);
-                cloudNumber++;
-            }
-            else {
-                cloudNumber = 0;
-                cloudImage1.setImageResource(imageArray[cloudNumber]);
-                cloudImage2.setImageResource(imageArray[cloudNumber]);
-                cloudImage3.setImageResource(imageArray[cloudNumber]);
-                cloudImage4.setImageResource(imageArray[cloudNumber]);
-            }
-
-            handler.postDelayed(this, 500);
-        }
-
-    };
+    
 }
